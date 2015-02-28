@@ -97,6 +97,6 @@ service apache2 reload
 
 sudo ln -s /usr/share/phpmyadmin /home/vagrant/devtools.buonzz.com/public/phpmyadmin
 
-
+chmod 777 /home/vagrant/devtools.buonzz.com/public/beanstalk_console/storage.json
 
 
