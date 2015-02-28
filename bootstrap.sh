@@ -27,7 +27,7 @@ sudo rm /etc/nginx/sites-available/default
 sudo cp /vagrant/configs/default.site /etc/nginx/sites-available/default
 
 #copy site contents
-cp /vagrant/sites/devtools.paperskeet.com /home/vagrant
+cp -R /vagrant/sites/devtools.buonzz.com /home/vagrant
 sudo nginx -s reload
 
 
@@ -62,9 +62,12 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 
 #install php driver
-sudo add-apt-repository ppa:chris-lea/mongodb-drivers
-sudo apt-get update
-sudo apt-get install -y php5-mongo
+sudo apt-get install php-pear php5-dev make
+sudo pecl install mongo
+sudo nano /etc/php5/fpm/php.ini
+# add extension=mongo.so
+sudo service php5-fpm restart
+
 
 # install supervisord & beanstalkd
 sudo apt-get install -y supervisor
@@ -84,3 +87,6 @@ sudo php5enmod mcrypt
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
+
+
+
