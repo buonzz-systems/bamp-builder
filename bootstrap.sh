@@ -89,4 +89,14 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
 
+sudo apt-get -y install phpmyadmin
+
+php5enmod mcrypt # Needs to be activated manually (that's an issue for Ubuntu 14.04)
+
+service apache2 reload
+
+sudo ln -s /usr/share/phpmyadmin /home/vagrant/devtools.buonzz.com/public/phpmyadmin
+
+
+
 
