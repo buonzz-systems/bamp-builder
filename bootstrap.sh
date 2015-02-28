@@ -100,3 +100,10 @@ sudo ln -s /usr/share/phpmyadmin /home/vagrant/devtools.buonzz.com/public/phpmya
 chmod 777 /home/vagrant/devtools.buonzz.com/public/beanstalk_console/storage.json
 
 
+sudo apt-get install php5-memcache
+sudo apt-get install memcached
+sudo apt-get install php-pear
+sudo apt-get install build-essential
+sudo pecl install memcache
+echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
+sudo service php5-fpm restart
