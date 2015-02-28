@@ -20,7 +20,7 @@ sudo apt-get install nginx
 sudo service nginx start
 
 #add vagrant user to www-data group
-usermod -G www-data vagrant
+sudo usermod -G www-data vagrant
 
 #configure default site
 sudo rm /etc/nginx/sites-available/default
@@ -111,6 +111,6 @@ sudo service php5-fpm restart
 
 
 sudo apt-get clean
-sudo dd if=/dev/zero of=/EMPTY bs=1M
-sudo rm -f /EMPTY
+#sudo dd if=/dev/zero of=/EMPTY bs=1M
+#sudo rm -f /EMPTY
 cat /dev/null > ~/.bash_history && history -c && exit
