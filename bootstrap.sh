@@ -107,3 +107,10 @@ sudo apt-get install build-essential
 sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
 sudo service php5-fpm restart
+
+
+
+sudo apt-get clean
+sudo dd if=/dev/zero of=/EMPTY bs=1M
+sudo rm -f /EMPTY
+cat /dev/null > ~/.bash_history && history -c && exit
