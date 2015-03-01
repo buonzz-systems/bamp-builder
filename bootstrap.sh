@@ -129,7 +129,10 @@ sudo pecl install memcache
 echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
 sudo service php5-fpm restart
 
-
+#try to fix weird issue about vagrant getting kicked out of sudoer
+echo %vagrant ALL=NOPASSWD:ALL > /etc/sudoers.d/vagrant
+chmod 0440 /etc/sudoers.d/vagrant
+usermod -a -G sudo vagrant
 
 sudo apt-get clean
 #sudo dd if=/dev/zero of=/EMPTY bs=1M

@@ -421,13 +421,13 @@
   	        <ul>
              <li><a href="/phpmyadmin">PHPMyAdmin</a></li>
              <li><a href="/rockmongo">RockMongo</a></li>
-             <li><a href="/beanstalk_console">BeanstalkConsole</a></li> 
+             <li><a href="/beanstalk_console/public">BeanstalkConsole</a></li> 
             </ul>
   	      </div>
   	    </div>
       </section>
     </div>
-    <a class="back" href="http://www.buonzz.com/docs/bamp">Docs</a>
+    <a class="back" href="http://www.buonzz.com/docs/bamp">Read the Docs</a>
     <a href="https://github.com/buonzz-systems/bamp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   </div>
 </body>
