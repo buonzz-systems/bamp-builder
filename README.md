@@ -24,8 +24,11 @@ Wait until the installation is finish. Then login to the box by
     vagrant ssh
 ```
 
-Now, execute and copy-paste manually the items under bootstrap.sh
-This really needs to be manually done so you can see the details.
+Do some random checks and make sure everything is ok. When ready package it by:
+
+```
+vagrant package --output dist/bamp-v[put version number].box
+
 
 ### References
 

@@ -134,6 +134,9 @@ echo %vagrant ALL=NOPASSWD:ALL > /etc/sudoers.d/vagrant
 chmod 0440 /etc/sudoers.d/vagrant
 usermod -a -G sudo vagrant
 
+echo "START=yes" | sudo tee /etc/default/beanstalkd
+sudo service beanstalkd start
+
 sudo apt-get clean
 #sudo dd if=/dev/zero of=/EMPTY bs=1M
 #sudo rm -f /EMPTY
