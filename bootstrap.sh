@@ -7,6 +7,8 @@
 # install console and git
 # apt-get install -y php5-cli git curl
 
+ sudo apt-get install php5-memcached
+
 #install mysql
 # sudo apt-get install mysql-server php5-mysql
 # sudo mysql_install_db
