@@ -28,7 +28,23 @@ Do some random checks and make sure everything is ok. When ready package it by:
 
 ```
 vagrant package --output dist/bamp-v[put version number].box
+```
 
+#### Install Redis
+
+```
+sudo apt-get update
+sudo apt-get install build-essential
+sudo apt-get install tcl8.5
+wget http://download.redis.io/releases/redis-2.8.9.tar.gz
+tar xzf redis-2.8.9.tar.gz
+cd redis-2.8.9
+make
+make test
+sudo make install
+cd utils
+sudo ./install_server.sh
+```
 
 ### References
 
@@ -38,3 +54,4 @@ vagrant package --output dist/bamp-v[put version number].box
 - http://stackoverflow.com/questions/23443398/nginx-error-connect-to-php5-fpm-sock-failed-13-permission-denied
 - https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
 - https://help.github.com/articles/generating-ssh-keys/
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis
