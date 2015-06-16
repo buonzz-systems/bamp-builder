@@ -55,3 +55,4 @@ sudo ./install_server.sh
 - https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04
 - https://help.github.com/articles/generating-ssh-keys/
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis
+- https://github.com/phpredis/phpredis
