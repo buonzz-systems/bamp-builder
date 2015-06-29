@@ -56,3 +56,5 @@ sudo ./install_server.sh
 - https://help.github.com/articles/generating-ssh-keys/
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis
 - https://github.com/phpredis/phpredis
+- http://www.microhowto.info/howto/perform_an_unattended_installation_of_a_debian_package.html
+- http://stackoverflow.com/questions/7739645/install-mysql-on-ubuntu-without-password-prompt
