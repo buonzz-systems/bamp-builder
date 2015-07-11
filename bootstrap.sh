@@ -34,7 +34,7 @@ sudo rm /etc/nginx/sites-available/default
 sudo cp /vagrant/configs/default.site /etc/nginx/sites-available/default
 
 #copy site contents
-cp -R /vagrant/sites/devtools.buonzz.com /home/vagrant
+cp -R /vagrant/sites/bamp.dev /home/vagrant
 sudo nginx -s reload
 
 
@@ -123,9 +123,9 @@ service apache2 reload
 
 
 
-sudo ln -s /usr/share/phpmyadmin /home/vagrant/devtools.buonzz.com/public/phpmyadmin
+sudo ln -s /usr/share/phpmyadmin /home/vagrant/bamp.dev/public/phpmyadmin
 
-chmod 777 /home/vagrant/devtools.buonzz.com/public/beanstalk_console/storage.json
+chmod 777 /home/vagrant/bamp.dev/public/beanstalk_console/storage.json
 
 
 sudo apt-get install -y php5-memcache

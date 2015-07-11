@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<title>BAMP Development Box</title>
 	<meta name="title" content="BAMP Development Box" />
-	<meta name="description" content="Develop Laravel Applications in your local machine" />
+	<meta name="description" content="Develop Web Applications in your local machine" />
 	<link rel="image_src" href="/images/notify_better_image.png" />
 
-	<meta content="http://www.buonzz.com/docs/bamp" property="og:url" />
-	<meta content="http://www.buonzz.com/docs/images/bamp.png" property="og:image" />
+	<meta content="http://www.buonzz.com/products/bamp/" property="og:url" />
+	<meta content="http://www.buonzz.com/images/screenshot-bamp.png" property="og:image" />
 	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
 	<meta name="author" content="Darwin Biler">
 	
@@ -392,7 +392,7 @@
           <h2>Welcome to your development Virtual Machine!</h2>
           <p class="credit">Created by <a href="http://www.darwinbiler.com">Darwin Biler</a>, Founder of <a href="http://www.buonzz.com" target="_blank">Buonzz Systems</a></p>
           <div class="btns">
-  	        <a class="reload btn" href="http://www.buonzz.com/docs/bamp-quickstart">Start Developing</a>
+  	        <a class="reload btn" href="http://www.buonzz.com/products/bamp/">Start Developing</a>
   	      </div>
   	    </div>
   	    <img src="phones.png" alt="phones">
@@ -427,7 +427,7 @@
   	    </div>
       </section>
     </div>
-    <a class="back" href="http://www.buonzz.com/docs/bamp">Read the Docs</a>
+    <a class="back" href="http://www.buonzz.com/products/bamp/">Read the Docs</a>
     <a href="https://github.com/buonzz-systems/bamp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   </div>
 </body>
