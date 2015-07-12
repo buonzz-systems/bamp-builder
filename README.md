@@ -7,10 +7,18 @@ Scripts to build BAMP Box
 
 * VirtualBox or VMware
 * Vagrant
+* Vritual Box Vagrant Plugin
 
 ###Installation
 
-In command line:
+
+Make sure first to install the Vagrant Plugin for VirtualBox
+
+```
+vagrant plugin install vagrant-vbguest
+```
+
+Then, in command line:
 
 ```
     git clone git@github.com:buonzz-systems/bamp-builder.git
@@ -58,3 +66,4 @@ sudo ./install_server.sh
 - https://github.com/phpredis/phpredis
 - http://www.microhowto.info/howto/perform_an_unattended_installation_of_a_debian_package.html
 - http://stackoverflow.com/questions/7739645/install-mysql-on-ubuntu-without-password-prompt
+- https://github.com/dotless-de/vagrant-vbguest

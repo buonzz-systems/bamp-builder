@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+sudo add-apt-repository ppa:ondrej/php5
+
+# unattended upgrade, avoids the garbled text
 unset UCF_FORCE_CONFFOLD
 export UCF_FORCE_CONFFNEW=YES
 ucf --purge /boot/grub/menu.lst
@@ -9,10 +12,17 @@ apt-get update
 apt-get -o Dpkg::Options::="--force-confnew" --force-yes -fuy dist-upgrade
 
 
-# install console and git
-apt-get install -y php5-cli git curl
+#upgrade PHP to 5.5
+sudo apt-get install php5 -y
 
- sudo apt-get install php5-memcached
+
+# install console and git, memcached
+apt-get install -y php5-cli git curl
+sudo apt-get install php5-memcached -y
+
+# fix PHP Warning: Module 'memcache' already loaded in Unknown on line 0
+sudo echo ";extension=memcache.so" > /etc/php5/cli/conf.d/memcache.ini
+
 
 #install mysql
 # sudo apt-get install mysql-server php5-mysql
@@ -54,12 +64,6 @@ sudo nginx -s reload
 
 # sudo service php5-fpm restart
 
-
-#upgrade PHP to 5.4
-# sudo apt-get install python-software-properties
-# sudo add-apt-repository ppa:ondrej/php5-oldstable
-# sudo apt-get update
-# sudo apt-get install php5
 
 
 # install mongodb
@@ -143,6 +147,11 @@ usermod -a -G sudo vagrant
 
 echo "START=yes" | sudo tee /etc/default/beanstalkd
 sudo service beanstalkd start
+
+
+#disable the /HOME/USERNAME/.NANO_HISTORY: PERMISSION DENIED
+sudo rm .nano_history
+
 
 sudo apt-get clean
 #sudo dd if=/dev/zero of=/EMPTY bs=1M
