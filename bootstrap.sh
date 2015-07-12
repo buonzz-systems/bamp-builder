@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:ondrej/php5
 
 # unattended upgrade, avoids the garbled text
@@ -25,9 +26,21 @@ sudo echo ";extension=memcache.so" > /etc/php5/cli/conf.d/memcache.ini
 
 
 #install mysql
-# sudo apt-get install mysql-server php5-mysql
-# sudo mysql_install_db
-# sudo /usr/bin/mysql_secure_installation
+
+echo mysql-server-5.5 mysql-server/root_password password buonzz | debconf-set-selections
+echo mysql-server-5.5 mysql-server/root_password_again password buonzz | debconf-set-selections
+
+sudo apt-get install mysql-server php5-mysql -y
+sudo mysql_install_db
+
+sudo iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+sudo iptables-save
+
+# allow mysql to get accessed outside
+sudo sed -i "s/bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+sudo service mysql restart
+
+
 
 #install nginx
 # echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/nginx-stable.list

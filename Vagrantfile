@@ -1,7 +1,7 @@
 
 Vagrant.configure(2) do |config|
   
-  config.vm.box = "paperstreetmedia/tsv3"
+  config.vm.box = "hashicorp/precise32"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
