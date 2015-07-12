@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php5
-
 # unattended upgrade, avoids the garbled text
 unset UCF_FORCE_CONFFOLD
 export UCF_FORCE_CONFFNEW=YES
@@ -14,8 +11,10 @@ apt-get -o Dpkg::Options::="--force-confnew" --force-yes -fuy dist-upgrade
 
 
 #upgrade PHP to 5.5
+sudo add-apt-repository ppa:ondrej/php5
+sudo apt-get update
+apt-get -o Dpkg::Options::="--force-confnew" --force-yes -fuy dist-upgrade
 sudo apt-get install php5 -y
-
 
 # install console and git, memcached
 apt-get install -y php5-cli git curl
@@ -149,8 +148,6 @@ sudo apt-get install -y php5-memcache
 sudo apt-get install -y memcached
 sudo apt-get install -y php-pear
 sudo apt-get install -y build-essential
-sudo pecl install memcache
-echo "extension=memcache.so" | sudo tee /etc/php5/conf.d/memcache.ini
 sudo service php5-fpm restart
 
 #try to fix weird issue about vagrant getting kicked out of sudoer
